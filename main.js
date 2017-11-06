@@ -36,8 +36,43 @@
      }
      return suma
  }
+/**
+ * @description BuscarAlumno busca a un alumno en una lista de alumnos 
+ * @param {Array} listaAlumnos lista alumnos
+ * @param {Alumno} alumno alumno a buscar
+ * @return {Boolean} devuelve si el alumno está en la lista o no
+ */
+function BuscarAlumno(listaAlumnos,alumno){
+    let encontrado=false;
+    for(let alum of listaAlumnos){
+        if(alum.nombre==alumno.nombre && alum.apellidos && alumno.apellidos){
+            encontrado=true;
+        }
+    }
+    return encontrado;
+}
+
+let alumnos=[
+    {
+        nombre:"pepe",
+        apellidos:"lopez"
+    },
+    {
+        nombre:"juan",
+        apellidos:"rodriguez"
+    },
+    {
+        nombre:"alejandro",
+        apellidos:"nannan"
+    }
+];
+
+let alumno={
+    nombre:"dassd"
+    apellidos:"kdnjss"
+};
 
  let sumaValor=SumaArray3([2,3,4,5]);
 
- console.log(sumaValor);
+ console.log(BuscarAlumno);
  //esto es una prueba
