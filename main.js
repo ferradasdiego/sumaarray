@@ -67,12 +67,13 @@ let alumnos=[
     }
 ];
 
-let alumno={
-    nombre:"dassd"
-    apellidos:"kdnjss"
+let alumno={                //aqui pongo al alumno que quiero buscar por nombre y apellidos
+    nombre:"juan",          //tiene que coincidir para que lo encuentre
+    apellidos:"rodriguezz"
 };
 
  let sumaValor=SumaArray3([2,3,4,5]);
 
- console.log(BuscarAlumno);
- //esto es una prueba
+ let encontraralumnos=BuscarAlumno(alumnos,alumno) 
+
+ console.log(encontraralumnos);
